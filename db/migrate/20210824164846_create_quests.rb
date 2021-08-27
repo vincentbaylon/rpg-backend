@@ -5,6 +5,7 @@ class CreateQuests < ActiveRecord::Migration[6.1]
       t.string :reward
       t.string :image
       t.string :reward_image
+      t.belongs_to :mob, foreign_key: true
     end
   end
 end

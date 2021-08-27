@@ -1,5 +1,5 @@
 class Mob < ActiveRecord::Base
     has_many :skills
-    belongs_to :quest
+    has_many :quests
     belongs_to :battle
 end
