@@ -5,7 +5,6 @@ class CreateQuests < ActiveRecord::Migration[6.1]
       t.string :reward
       t.string :image
       t.string :reward_image
-      t.array :speech
     end
   end
 end

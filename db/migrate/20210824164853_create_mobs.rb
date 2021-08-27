@@ -8,6 +8,7 @@ class CreateMobs < ActiveRecord::Migration[6.1]
       t.integer :defense
       t.boolean :turn
       t.boolean :in_battle
+      t.belongs_to :quest, foreign_key: true
     end
   end
 end

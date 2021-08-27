@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2021_08_25_042035) do
     t.integer "defense"
     t.boolean "turn"
     t.boolean "in_battle"
+    t.integer "quest_id"
+    t.index ["quest_id"], name: "index_mobs_on_quest_id"
   end
 
   create_table "quest_lists", force: :cascade do |t|
@@ -72,6 +74,7 @@ ActiveRecord::Schema.define(version: 2021_08_25_042035) do
 
   add_foreign_key "battles", "characters"
   add_foreign_key "battles", "mobs"
+  add_foreign_key "mobs", "quests"
   add_foreign_key "quest_lists", "characters"
   add_foreign_key "quest_lists", "quests"
   add_foreign_key "scenes", "characters"

@@ -1,3 +1,5 @@
 class Quest < ActiveRecord::Base
-    belongs_to :character
+    has_many :quest_lists
+    has_many :characters, through: :quest_lists
+    has_one :mob
 end
